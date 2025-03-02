@@ -15,7 +15,7 @@ export default function Home() {
         <title>ポートフォリオ | nojuuu</title>
         <meta name="description" content="nojuuuのポートフォリオサイト" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/portfolio/favicon.ico" />
+        <link rel="icon" href={process.env.NODE_ENV === 'production' ? '/portfolio/favicon.ico' : '/favicon.ico'} />
       </Head>
       <Navbar />
       <Hero />

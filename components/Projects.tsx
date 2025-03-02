@@ -4,7 +4,7 @@ import ProjectItem from './ProjectItem';
 // プロジェクトデータ
 const projectsData = [
   {
-    id: 1,
+    id: '3d-repo',
     title: '3D空間でのリポジトリ',
     backgroundImg: '/assets/projects/3d-repo.png',
     tech: 'R3F + Express + MongoDB',
@@ -12,7 +12,7 @@ const projectsData = [
     description: '遊び心あるリポジトリを作り、作品制作の意欲を高めることを目的としたアプリ。',
   },
   {
-    id: 2,
+    id: 'video-call',
     title: '新しいUIのビデオ通話アプリ',
     backgroundImg: '/assets/projects/video-call.png',
     tech: 'React Three Fiber + WebRTC',
@@ -20,7 +20,7 @@ const projectsData = [
     description: '3D空間上にビデオ映像を表示することで、2D空間の無機質さを克服しようと考えた通話アプリ。',
   },
   {
-    id: 3,
+    id: 'calendar-agent',
     title: 'ChatGPT予定監視エージェント',
     backgroundImg: '/assets/projects/calendar-agent.png',
     tech: 'Python + ChatGPT API + Google Calendar API',

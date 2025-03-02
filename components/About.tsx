@@ -29,9 +29,13 @@ const About = () => {
           </Link>
         </div>
         <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
-          <div className="rounded-xl bg-gray-200 w-full h-[400px] flex items-center justify-center">
-            <p>プロフィール画像</p>
-          </div>
+          <Image
+            className='rounded-xl'
+            src={process.env.NODE_ENV === 'production' ? '/portfolio/assets/profile.png' : '/assets/profile.png'}
+            width={500}
+            height={500}
+            alt='プロフィール画像'
+          />
         </div>
       </div>
     </div>

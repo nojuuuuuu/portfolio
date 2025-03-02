@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>ポートフォリオ</title>
         <meta name="description" content="私のポートフォリオサイト" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={process.env.NODE_ENV === 'production' ? '/portfolio/favicon.ico' : '/favicon.ico'} />
       </Head>
       <main className={inter.className}>
         <Component {...pageProps} />

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Head from 'next/head';
 
 // プロジェクトデータ
 const projectsData = [
@@ -73,84 +74,56 @@ const ProjectDetails = () => {
 
   return (
     <>
+      <Head>
+        <title>{project.title} | ポートフォリオ</title>
+        <meta name='description' content={project.description} />
+      </Head>
       <Navbar />
       <div className='w-full'>
-        <div className='w-screen h-[50vh] relative'>
-          <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />
-          {/* <Image
+        <div className='w-screen h-[30vh] lg:h-[40vh] relative'>
+          {/* basePath対応のため、画像パスを修正 */}
+          <div className='absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10' />
+          <Image
             className='absolute z-1'
-            src={project.backgroundImg}
+            src={process.env.NODE_ENV === 'production' ? `/portfolio${project.backgroundImg}` : project.backgroundImg}
             alt={project.title}
-            layout='fill'
-            objectFit='cover'
-          /> */}
-          <div className='absolute top-0 left-0 w-full h-[50vh] bg-gray-600 z-1 flex items-center justify-center'>
-            <p className="text-white text-xl">{project.title}</p>
-          </div>
-          <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-            <h2 className='py-2'>{project.title}</h2>
-            <h3>{project.tech}</h3>
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+          <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] z-10 p-2'>
+            <h2 className='py-2 text-white'>{project.title}</h2>
+            <h3 className='text-white'>{project.tech}</h3>
           </div>
         </div>
-
-        <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
+        
+        <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8'>
           <div className='col-span-4'>
             <p className='text-xl tracking-widest uppercase text-primary'>プロジェクト</p>
             <h2 className='py-4'>{project.title}</h2>
+            <p>{project.description}</p>
             
-            {/* プロジェクト画像ギャラリー */}
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-8'>
-              <div className='bg-gray-200 h-64 flex items-center justify-center'>
-                <p>メイン画像</p>
-              </div>
-              {project.otherImages && project.otherImages.map((img, index) => (
-                <div key={index} className='bg-gray-200 h-64 flex items-center justify-center'>
-                  <p>追加画像 {index + 1}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* プロジェクト詳細 */}
-            <div className='whitespace-pre-line'>
-              {project.details.split('\n\n').map((paragraph, index) => (
-                <p key={index} className='mb-4'>{paragraph}</p>
-              ))}
-            </div>
-            
-            <div className='flex items-center justify-between my-4'>
-              <a
-                href={project.github}
-                target='_blank'
-                rel='noreferrer'
-                className='px-8 py-2 mt-4 mr-8 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-primary to-accent text-white'
-              >
-                GitHub
-              </a>
-              <a
-                href={project.demo}
-                target='_blank'
-                rel='noreferrer'
-                className='px-8 py-2 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-primary to-accent text-white'
-              >
-                デモ
-              </a>
-            </div>
-            <Link href='/#projects'>
-              <p className='underline cursor-pointer'>戻る</p>
-            </Link>
+            <a href={project.github} target='_blank' rel='noreferrer'>
+              <button className='px-8 py-2 mt-4 mr-8'>コード</button>
+            </a>
+            <a href={project.demo} target='_blank' rel='noreferrer'>
+              <button className='px-8 py-2 mt-4'>デモ</button>
+            </a>
           </div>
-          <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
+          <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
             <div className='p-2'>
-              <p className='text-center font-bold pb-2'>技術スタック</p>
+              <p className='font-bold pb-2'>技術</p>
               <div className='grid grid-cols-3 md:grid-cols-1'>
                 {project.technologies.map((tech, index) => (
-                  <p key={index} className='text-gray-600 py-2 flex items-center'>
-                    <RiRadioButtonFill className='pr-1' /> {tech}
+                  <p key={index} className='py-2 flex items-center'>
+                    <span className='mr-1'>•</span> {tech}
                   </p>
                 ))}
               </div>
             </div>
           </div>
+          <Link href='/#projects'>
+            <p className='underline cursor-pointer'>戻る</p>
+          </Link>
         </div>
       </div>
       <Footer />

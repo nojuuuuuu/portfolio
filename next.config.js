@@ -5,9 +5,9 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  // GitHub Pages用の設定
-  basePath: '/portfolio', // ここをあなたのリポジトリ名に変更
-  assetPrefix: '/portfolio/', // ここをあなたのリポジトリ名に変更
+  // GitHub Pages用の設定（開発環境では適用しない）
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio/' : '',
 }
 
 module.exports = nextConfig 
