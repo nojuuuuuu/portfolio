@@ -14,7 +14,6 @@ const projectsData = [
     backgroundImg: '/assets/projects/3d-repo.png',
     otherImages: [
       '/assets/projects/3d-repo-2.png',
-      '/assets/projects/3d-repo-3.png',
     ],
     tech: 'R3F + Express + MongoDB',
     github: 'https://github.com/',
@@ -29,7 +28,6 @@ const projectsData = [
     backgroundImg: '/assets/projects/video-call.png',
     otherImages: [
       '/assets/projects/video-call-2.png',
-      '/assets/projects/video-call-3.png',
     ],
     tech: 'React Three Fiber + WebRTC',
     github: 'https://github.com/',
@@ -44,7 +42,6 @@ const projectsData = [
     backgroundImg: '/assets/projects/calendar-agent.png',
     otherImages: [
       '/assets/projects/calendar-agent-2.png',
-      '/assets/projects/calendar-agent-3.png',
     ],
     tech: 'Python + ChatGPT API + Google Calendar API',
     github: 'https://github.com/',
@@ -80,17 +77,13 @@ const ProjectDetails = () => {
       <div className='w-full'>
         <div className='w-screen h-[50vh] relative'>
           <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />
-          {/* 画像が存在しない場合のエラーを避けるためにImageコンポーネントをコメントアウト */}
-          {/* <Image
+          <Image
             className='absolute z-1'
             src={project.backgroundImg}
             alt={project.title}
             layout='fill'
             objectFit='cover'
-          /> */}
-          <div className='absolute top-0 left-0 w-full h-[50vh] bg-gray-600 z-1 flex items-center justify-center'>
-            <p className="text-white text-xl">{project.title}</p>
-          </div>
+          />
           <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
             <h2 className='py-2'>{project.title}</h2>
             <h3>{project.tech}</h3>
@@ -104,12 +97,24 @@ const ProjectDetails = () => {
             
             {/* プロジェクト画像ギャラリー */}
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-8'>
-              <div className='bg-gray-200 h-64 flex items-center justify-center'>
-                <p>メイン画像</p>
+              <div className='relative h-64'>
+                <Image
+                  src={project.backgroundImg}
+                  alt={`${project.title} メイン画像`}
+                  layout='fill'
+                  objectFit='cover'
+                  className='rounded-lg'
+                />
               </div>
               {project.otherImages && project.otherImages.map((img, index) => (
-                <div key={index} className='bg-gray-200 h-64 flex items-center justify-center'>
-                  <p>追加画像 {index + 1}</p>
+                <div key={index} className='relative h-64'>
+                  <Image
+                    src={img}
+                    alt={`${project.title} 追加画像 ${index + 1}`}
+                    layout='fill'
+                    objectFit='cover'
+                    className='rounded-lg'
+                  />
                 </div>
               ))}
             </div>
