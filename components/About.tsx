@@ -29,13 +29,9 @@ const About = () => {
           </Link>
         </div>
         <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
-          <Image
-            className='rounded-xl'
-            src='/assets/profile.png'
-            alt='プロフィール画像'
-            width={400}
-            height={400}
-          />
+          <div className="rounded-xl bg-gray-200 w-full h-[400px] flex items-center justify-center">
+            <p>プロフィール画像</p>
+          </div>
         </div>
       </div>
     </div>

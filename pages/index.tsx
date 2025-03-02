@@ -13,9 +13,9 @@ export default function Home() {
     <>
       <Head>
         <title>ポートフォリオ | nojuuu</title>
-        <meta name="description" content="あなたの名前のポートフォリオサイト" />
+        <meta name="description" content="nojuuuのポートフォリオサイト" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/portfolio/favicon.ico" />
       </Head>
       <Navbar />
       <Hero />

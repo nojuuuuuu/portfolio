@@ -77,13 +77,16 @@ const ProjectDetails = () => {
       <div className='w-full'>
         <div className='w-screen h-[50vh] relative'>
           <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />
-          <Image
+          {/* <Image
             className='absolute z-1'
             src={project.backgroundImg}
             alt={project.title}
             layout='fill'
             objectFit='cover'
-          />
+          /> */}
+          <div className='absolute top-0 left-0 w-full h-[50vh] bg-gray-600 z-1 flex items-center justify-center'>
+            <p className="text-white text-xl">{project.title}</p>
+          </div>
           <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
             <h2 className='py-2'>{project.title}</h2>
             <h3>{project.tech}</h3>
@@ -97,24 +100,12 @@ const ProjectDetails = () => {
             
             {/* プロジェクト画像ギャラリー */}
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-8'>
-              <div className='relative h-64'>
-                <Image
-                  src={project.backgroundImg}
-                  alt={`${project.title} メイン画像`}
-                  layout='fill'
-                  objectFit='cover'
-                  className='rounded-lg'
-                />
+              <div className='bg-gray-200 h-64 flex items-center justify-center'>
+                <p>メイン画像</p>
               </div>
               {project.otherImages && project.otherImages.map((img, index) => (
-                <div key={index} className='relative h-64'>
-                  <Image
-                    src={img}
-                    alt={`${project.title} 追加画像 ${index + 1}`}
-                    layout='fill'
-                    objectFit='cover'
-                    className='rounded-lg'
-                  />
+                <div key={index} className='bg-gray-200 h-64 flex items-center justify-center'>
+                  <p>追加画像 {index + 1}</p>
                 </div>
               ))}
             </div>
