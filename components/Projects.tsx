@@ -6,7 +6,7 @@ const projectsData = [
   {
     id: 1,
     title: '3D空間でのリポジトリ',
-    backgroundImg: '/assets/projects/3d-repo.jpg',
+    backgroundImg: '/assets/projects/3d-repo.png',
     tech: 'R3F + Express + MongoDB',
     projectUrl: '/projects/3d-repo',
     description: '遊び心あるリポジトリを作り、作品制作の意欲を高めることを目的としたアプリ。',
@@ -14,7 +14,7 @@ const projectsData = [
   {
     id: 2,
     title: '新しいUIのビデオ通話アプリ',
-    backgroundImg: '/assets/projects/video-call.jpg',
+    backgroundImg: '/assets/projects/video-call.png',
     tech: 'React Three Fiber + WebRTC',
     projectUrl: '/projects/video-call',
     description: '3D空間上にビデオ映像を表示することで、2D空間の無機質さを克服しようと考えた通話アプリ。',
@@ -22,7 +22,7 @@ const projectsData = [
   {
     id: 3,
     title: 'ChatGPT予定監視エージェント',
-    backgroundImg: '/assets/projects/calendar-agent.jpg',
+    backgroundImg: '/assets/projects/calendar-agent.png',
     tech: 'Python + ChatGPT API + Google Calendar API',
     projectUrl: '/projects/calendar-agent',
     description: '開いているウィンドウを確認し、予定とそぐわない場合タブを強制終了させるアプリ。',

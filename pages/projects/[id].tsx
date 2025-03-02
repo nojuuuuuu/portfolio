@@ -11,10 +11,10 @@ const projectsData = [
   {
     id: '3d-repo',
     title: '3D空間でのリポジトリ',
-    backgroundImg: '/assets/projects/3d-repo.jpg',
+    backgroundImg: '/assets/projects/3d-repo.png',
     otherImages: [
-      '/assets/projects/3d-repo-2.jpg',
-      '/assets/projects/3d-repo-3.jpg',
+      '/assets/projects/3d-repo-2.png',
+      '/assets/projects/3d-repo-3.png',
     ],
     tech: 'R3F + Express + MongoDB',
     github: 'https://github.com/',
@@ -26,10 +26,10 @@ const projectsData = [
   {
     id: 'video-call',
     title: '新しいUIのビデオ通話アプリ',
-    backgroundImg: '/assets/projects/video-call.jpg',
+    backgroundImg: '/assets/projects/video-call.png',
     otherImages: [
-      '/assets/projects/video-call-2.jpg',
-      '/assets/projects/video-call-3.jpg',
+      '/assets/projects/video-call-2.png',
+      '/assets/projects/video-call-3.png',
     ],
     tech: 'React Three Fiber + WebRTC',
     github: 'https://github.com/',
@@ -41,10 +41,10 @@ const projectsData = [
   {
     id: 'calendar-agent',
     title: 'ChatGPT予定監視エージェント',
-    backgroundImg: '/assets/projects/calendar-agent.jpg',
+    backgroundImg: '/assets/projects/calendar-agent.png',
     otherImages: [
-      '/assets/projects/calendar-agent-2.jpg',
-      '/assets/projects/calendar-agent-3.jpg',
+      '/assets/projects/calendar-agent-2.png',
+      '/assets/projects/calendar-agent-3.png',
     ],
     tech: 'Python + ChatGPT API + Google Calendar API',
     github: 'https://github.com/',

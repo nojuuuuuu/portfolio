@@ -34,7 +34,7 @@ const About = () => {
         <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
           {/* <Image
             className='rounded-xl'
-            src='/assets/profile.jpg'
+            src='/assets/profile.png'
             alt='プロフィール画像'
             width={400}
             height={400}
