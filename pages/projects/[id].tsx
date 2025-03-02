@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Head from 'next/head';
+
 
 // プロジェクトデータ
 const projectsData = [
@@ -79,7 +81,7 @@ const ProjectDetails = () => {
           <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />
           <Image
             className='absolute z-1'
-            src={project.backgroundImg}
+            src={process.env.NODE_ENV === 'production' ? `/portfolio${project.backgroundImg}` : project.backgroundImg}
             alt={project.title}
             layout='fill'
             objectFit='cover'
