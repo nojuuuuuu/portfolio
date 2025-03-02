@@ -101,7 +101,7 @@ const ProjectDetails = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-8'>
               <div className='relative h-64'>
                 <Image
-                  src={project.backgroundImg}
+                  src={process.env.NODE_ENV === 'production' ? `/portfolio${project.backgroundImg}` : project.backgroundImg}
                   alt={`${project.title} メイン画像`}
                   layout='fill'
                   objectFit='cover'
@@ -111,7 +111,7 @@ const ProjectDetails = () => {
               {project.otherImages && project.otherImages.map((img, index) => (
                 <div key={index} className='relative h-64'>
                   <Image
-                    src={img}
+                    src={process.env.NODE_ENV === 'production' ? `/portfolio${img}` : img}
                     alt={`${project.title} 追加画像 ${index + 1}`}
                     layout='fill'
                     objectFit='cover'
