@@ -4,9 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // 開発環境での問題解決のため、一時的にコメントアウト
-  // basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
-  // assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio/' : '',
+  output: 'export',
 }
 
 module.exports = nextConfig 

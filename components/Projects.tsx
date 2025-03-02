@@ -5,35 +5,27 @@ import ProjectItem from './ProjectItem';
 const projectsData = [
   {
     id: 1,
-    title: 'ポートフォリオサイト',
-    backgroundImg: '/assets/projects/portfolio.jpg',
-    tech: 'Next.js + Tailwind CSS',
-    projectUrl: '/projects/portfolio',
-    description: '自己紹介とスキル、制作物を紹介するためのポートフォリオサイト。',
+    title: '3D空間でのリポジトリ',
+    backgroundImg: '/assets/projects/3d-repo.jpg',
+    tech: 'R3F + Express + MongoDB',
+    projectUrl: '/projects/3d-repo',
+    description: '遊び心あるリポジトリを作り、作品制作の意欲を高めることを目的としたアプリ。',
   },
   {
     id: 2,
-    title: 'ECサイト',
-    backgroundImg: '/assets/projects/ecommerce.jpg',
-    tech: 'React + Node.js',
-    projectUrl: '/projects/ecommerce',
-    description: '商品の表示、カート機能、決済機能を備えたECサイト。',
+    title: '新しいUIのビデオ通話アプリ',
+    backgroundImg: '/assets/projects/video-call.jpg',
+    tech: 'React Three Fiber + WebRTC',
+    projectUrl: '/projects/video-call',
+    description: '3D空間上にビデオ映像を表示することで、2D空間の無機質さを克服しようと考えた通話アプリ。',
   },
   {
     id: 3,
-    title: 'SNSアプリ',
-    backgroundImg: '/assets/projects/social.jpg',
-    tech: 'React + Firebase',
-    projectUrl: '/projects/social',
-    description: 'ユーザー登録、投稿、いいね機能などを備えたSNSアプリ。',
-  },
-  {
-    id: 4,
-    title: '天気予報アプリ',
-    backgroundImg: '/assets/projects/weather.jpg',
-    tech: 'JavaScript + OpenWeather API',
-    projectUrl: '/projects/weather',
-    description: '現在地や指定した場所の天気予報を表示するアプリ。',
+    title: 'ChatGPT予定監視エージェント',
+    backgroundImg: '/assets/projects/calendar-agent.jpg',
+    tech: 'Python + ChatGPT API + Google Calendar API',
+    projectUrl: '/projects/calendar-agent',
+    description: '開いているウィンドウを確認し、予定とそぐわない場合タブを強制終了させるアプリ。',
   },
 ];
 
@@ -44,7 +36,7 @@ const Projects = () => {
         <p className='text-xl tracking-widest uppercase text-primary'>
           プロジェクト
         </p>
-        <h2 className='py-4'>制作したもの</h2>
+        <h2 className='py-4'>制作物</h2>
         <div className='grid md:grid-cols-2 gap-8'>
           {projectsData.map((project) => (
             <ProjectItem

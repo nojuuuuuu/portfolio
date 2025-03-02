@@ -9,48 +9,49 @@ import Footer from '../../components/Footer';
 // プロジェクトデータ
 const projectsData = [
   {
-    id: 'portfolio',
-    title: 'ポートフォリオサイト',
-    backgroundImg: '/assets/projects/portfolio.jpg',
-    tech: 'Next.js + Tailwind CSS',
+    id: '3d-repo',
+    title: '3D空間でのリポジトリ',
+    backgroundImg: '/assets/projects/3d-repo.jpg',
+    otherImages: [
+      '/assets/projects/3d-repo-2.jpg',
+      '/assets/projects/3d-repo-3.jpg',
+    ],
+    tech: 'R3F + Express + MongoDB',
     github: 'https://github.com/',
     demo: 'https://example.com/',
-    description: '自己紹介とスキル、制作物を紹介するためのポートフォリオサイト。',
-    technologies: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'GitHub Pages'],
-    details: 'このポートフォリオサイトは、Next.jsとTailwind CSSを使用して構築されました。レスポンシブデザインを採用し、様々なデバイスで最適な表示が可能です。GitHub Pagesを使用してデプロイされています。',
+    description: '遊び心あるリポジトリを作り、作品制作の意欲を高めることを目的としたアプリ。',
+    technologies: ['React Three Fiber', 'Express', 'MongoDB', 'Three.js', 'Node.js'],
+    details: '遊び心あるリポジトリを作り、作品制作の意欲を高めることを目的としたアプリです。テレビは他ポートで立ち上げたアプリをレンダリングしており、そこに音楽、写真、プログラミング作品、動画の四つのジャンルの作品をアップロードすることができます。アップロードした音楽はラジカセから聞くこともできます。\n\n【こだわり】\n3D空間、テレビのUIをレトロ調なコンセプトで統一しており、現実のコンピュータでは味わえないような体験を作り出そうとこだわっています。また、ウィンドウをドラッグ可能にしています。',
   },
   {
-    id: 'ecommerce',
-    title: 'ECサイト',
-    backgroundImg: '/assets/projects/ecommerce.jpg',
-    tech: 'React + Node.js',
+    id: 'video-call',
+    title: '新しいUIのビデオ通話アプリ',
+    backgroundImg: '/assets/projects/video-call.jpg',
+    otherImages: [
+      '/assets/projects/video-call-2.jpg',
+      '/assets/projects/video-call-3.jpg',
+    ],
+    tech: 'React Three Fiber + WebRTC',
     github: 'https://github.com/',
     demo: 'https://example.com/',
-    description: '商品の表示、カート機能、決済機能を備えたECサイト。',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe API'],
-    details: 'このECサイトは、フロントエンドにReact、バックエンドにNode.jsとExpressを使用しています。データベースにはMongoDBを採用し、決済処理にはStripe APIを統合しています。ユーザー認証、商品検索、カート機能、注文履歴など、ECサイトに必要な機能を実装しています。',
+    description: '3D空間上にビデオ映像を表示することで、2D空間の無機質さを克服しようと考えた通話アプリ。',
+    technologies: ['React Three Fiber', 'WebRTC', 'Three.js', 'Socket.io', 'Node.js'],
+    details: '3D空間上にビデオ映像を表示することで、2D空間の無機質さを克服しようと考えた通話アプリです。WebRTCの技術を用いて実際にビデオ通話ができるようになっています。\n\n【こだわり】\nカメラの角度によってビデオ映像の表示領域も変わり、運動視差のようなものを実現しています。',
   },
   {
-    id: 'social',
-    title: 'SNSアプリ',
-    backgroundImg: '/assets/projects/social.jpg',
-    tech: 'React + Firebase',
+    id: 'calendar-agent',
+    title: 'ChatGPT予定監視エージェント',
+    backgroundImg: '/assets/projects/calendar-agent.jpg',
+    otherImages: [
+      '/assets/projects/calendar-agent-2.jpg',
+      '/assets/projects/calendar-agent-3.jpg',
+    ],
+    tech: 'Python + ChatGPT API + Google Calendar API',
     github: 'https://github.com/',
     demo: 'https://example.com/',
-    description: 'ユーザー登録、投稿、いいね機能などを備えたSNSアプリ。',
-    technologies: ['React', 'Firebase', 'Firestore', 'Authentication', 'Storage'],
-    details: 'このSNSアプリは、ReactとFirebaseを使用して構築されました。ユーザー認証、プロフィール編集、投稿作成、いいね、コメント、フォロー機能などを実装しています。リアルタイムデータベースを活用して、リアルタイムな更新を実現しています。',
-  },
-  {
-    id: 'weather',
-    title: '天気予報アプリ',
-    backgroundImg: '/assets/projects/weather.jpg',
-    tech: 'JavaScript + OpenWeather API',
-    github: 'https://github.com/',
-    demo: 'https://example.com/',
-    description: '現在地や指定した場所の天気予報を表示するアプリ。',
-    technologies: ['JavaScript', 'HTML', 'CSS', 'OpenWeather API', 'Geolocation API'],
-    details: 'この天気予報アプリは、JavaScriptとOpenWeather APIを使用して構築されました。現在地の取得にはGeolocation APIを使用し、5日間の天気予報を表示します。レスポンシブデザインを採用し、様々なデバイスで使用可能です。',
+    description: '開いているウィンドウを確認し、予定とそぐわない場合タブを強制終了させるアプリ。',
+    technologies: ['Python', 'ChatGPT API', 'Google Calendar API', 'Windows API', 'PyAutoGUI'],
+    details: '開いているウィンドウを確認し、それが予定とそぐわない物であればタブを強制終了させるアプリです。Google Calendar APIを用いて予定を取得し、Pythonを用いてウィンドウの情報も確認し、それらをChatGPTに送り開いているウィンドウが現在の作業に必要か判断し、不要だと判断された場合強制シャットダウンします。例えば、ソフトウェア開発の予定中にYoutubeでサッカーの動画を見た場合強制終了させられます。\n\n【こだわり】\nChatGPTに送るリクエストのプロンプトに多くの条件を足すことでかなり柔軟な判断を可能にしています。',
   },
 ];
 
@@ -100,7 +101,26 @@ const ProjectDetails = () => {
           <div className='col-span-4'>
             <p className='text-xl tracking-widest uppercase text-primary'>プロジェクト</p>
             <h2 className='py-4'>{project.title}</h2>
-            <p>{project.details}</p>
+            
+            {/* プロジェクト画像ギャラリー */}
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-8'>
+              <div className='bg-gray-200 h-64 flex items-center justify-center'>
+                <p>メイン画像</p>
+              </div>
+              {project.otherImages && project.otherImages.map((img, index) => (
+                <div key={index} className='bg-gray-200 h-64 flex items-center justify-center'>
+                  <p>追加画像 {index + 1}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* プロジェクト詳細 */}
+            <div className='whitespace-pre-line'>
+              {project.details.split('\n\n').map((paragraph, index) => (
+                <p key={index} className='mb-4'>{paragraph}</p>
+              ))}
+            </div>
+            
             <div className='flex items-center justify-between my-4'>
               <a
                 href={project.github}
