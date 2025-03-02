@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ポートフォリオ | あなたの名前</title>
+        <title>ポートフォリオ | nojuuu</title>
         <meta name="description" content="あなたの名前のポートフォリオサイト" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

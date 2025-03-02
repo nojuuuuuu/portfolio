@@ -25,8 +25,8 @@ const Contact = () => {
           <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
             <div className='lg:p-4 h-full'>
               <div>
-                <h2 className='py-2'>あなたの名前</h2>
-                <p>フロントエンド開発者</p>
+                <h2 className='py-2'>nojuuu</h2>
+                <p>university student</p>
               </div>
               <div>
                 <p className='uppercase pt-8'>お気軽にご連絡ください</p>
